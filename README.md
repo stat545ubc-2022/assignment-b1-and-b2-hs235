@@ -11,12 +11,11 @@ This is a individual project for UBC course *[STAT 545B](https://stat545.stat.ub
   * Initial release expected by 18<sup>th</sup> November 2022
   
 
-## Project Files
-1. *[MDA1](/MDA1.md)*: Report1 rendered in Github friendly format.
-2. *[MDA1.rmd](/MDA1.rmd)*: Corresponding file containing the `R` code for the report1 analysis.
+## Current Project Files
+1. *[assignment-b1-and-b2-hs235](/Assign_B1.md)*: rendered in Github friendly format.
 
 ## Code execution
-The corrected code can be run from files *[MDA2](/MDA2.Rmd)* using `R` software along with additional packages such as `tidyverse`, `devtools`, and specifically  `test_that`. Using an IDE such as `RStudio` carries out this task easily.
+The corrected code can be run from files *[assignment-b1-and-b2-hs235](/Assign_B1.Rmd)* using `R` software along with additional packages such as `tidyverse`, `devtools`, and specifically  `test_that`. Using an IDE such as `RStudio` carries out this task easily.
 
 ## Contributers
 [@Harsh](https://github.com/hs235)
