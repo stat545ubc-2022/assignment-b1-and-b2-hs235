@@ -32,9 +32,9 @@ tags.
 #'          Rows with N/A values are kept as it can still be valid grouping combinations. Thus N/A values are treated via omission in the calculation of mean
 #' 
 #' @param dataFrame dataframe_like_object input only accepts dataframe or tibbular data & hence the chosen name to indicate the inclusion of both
-#' @param group_by vector should be non-empty, either numerical or string thus the chosen name is kept generic
+#' @param group_by vector should be non-empty, can either be numerical or string thus the chosen name is kept generic
 #' 
-#' @return tibble for the case where legal arguments are passed a 1xn tibble is returned with values of mean for original column names
+#' @return tibble for the case where legal arguments are passed with values of calculated mean for numeric columns not used in grouping
 #' @return null for the case where invalid arguments are passed to function along with error message   
 
 options(dplyr.summarise.inform = FALSE) # Suppressing default message using global option
@@ -160,7 +160,7 @@ test_that("Invalid data type error", {
     })
 ```
 
-    ## Test passed 🥇
+    ## Test passed 🎉
 
 ###### Test 2: Checking for valid argument range
 
@@ -170,7 +170,7 @@ test_that("Invalid group by index error", {
     })
 ```
 
-    ## Test passed 🥳
+    ## Test passed 😀
 
 ###### Test 3: Checking for non-empty arguments
 
@@ -190,7 +190,7 @@ test_that("Expect the mean to equal 3 for all data vales = 3 grouped by first in
     })
 ```
 
-    ## Test passed 🥇
+    ## Test passed 🥳
 
 ###### Test 5: Checking for proper handling of N/A values
 
@@ -200,4 +200,4 @@ test_that("Test mean removes NA values in summarized column ", {
     })
 ```
 
-    ## Test passed 🌈
+    ## Test passed 🎊
