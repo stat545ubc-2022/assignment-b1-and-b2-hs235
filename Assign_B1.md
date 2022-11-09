@@ -41,7 +41,7 @@ options(dplyr.summarise.inform = FALSE) # Suppressing default message using glob
 
 summarize_by_group_mean = function(dataFrame, group_by){
     if (! (is.vector(group_by) && length(group_by) > 0)){
-    stop('Group by column parameter is invalid')
+      stop('Group by column parameter is invalid')
     }
     
     # if numeric col_ind passed check they don't have matching names in the tibble
@@ -170,7 +170,7 @@ test_that("Invalid group by index error", {
     })
 ```
 
-    ## Test passed 🎉
+    ## Test passed 🥳
 
 ###### Test 3: Checking for non-empty arguments
 
@@ -180,7 +180,7 @@ test_that("Empty group by index error", {
     })
 ```
 
-    ## Test passed 🥇
+    ## Test passed 🌈
 
 ###### Test 4: Checking for computational correctness
 
@@ -190,7 +190,7 @@ test_that("Expect the mean to equal 3 for all data vales = 3 grouped by first in
     })
 ```
 
-    ## Test passed 🥳
+    ## Test passed 🥇
 
 ###### Test 5: Checking for proper handling of N/A values
 
@@ -200,4 +200,4 @@ test_that("Test mean removes NA values in summarized column ", {
     })
 ```
 
-    ## Test passed 🥇
+    ## Test passed 🌈

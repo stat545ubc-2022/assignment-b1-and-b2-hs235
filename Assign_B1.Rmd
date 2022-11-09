@@ -45,7 +45,7 @@ options(dplyr.summarise.inform = FALSE) # Suppressing default message using glob
 
 summarize_by_group_mean = function(dataFrame, group_by){
     if (! (is.vector(group_by) && length(group_by) > 0)){
-    stop('Group by column parameter is invalid')
+      stop('Group by column parameter is invalid')
     }
     
     # if numeric col_ind passed check they don't have matching names in the tibble
