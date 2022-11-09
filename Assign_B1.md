@@ -49,25 +49,27 @@ summarize_by_group_mean = function(dataFrame, group_by){
     if (is.numeric(group_by) && sum(group_by %in% names(dataFrame))==0 ){
       group_by = names(dataFrame)[group_by]
           if (sum(is.na(group_by)) > 0 || identical(group_by, character(0)) ) { # Ensuring no column index is out of bounds
-          stop('Column indices not valid')
+              stop('Column indices not valid')
           }
     } 
     
     else if (sum(group_by %in% names(dataFrame))==length(group_by)){   # if reached here then ensuring all input vector elements are legal column names
-    invisible()
+        invisible()
     }
   
     else {
-    stop('Column name(s) not valid')
+        stop('Column name(s) not valid')
     }
   
-  # now grouping the data, summarize by mean and drop n/a values, and return
+  # now grouping the data, summarize by mean while omitting N/A values, and return
   dataFrame %>% 
-    group_by_at(group_by) %>%
-      summarise(across(where(is.numeric), ~ mean(.x, na.rm = TRUE))) %>% 
-        return
+      group_by_at(group_by) %>%
+          summarise(across(where(is.numeric), ~ mean(.x, na.rm = TRUE))) %>% 
+              return
 }
 ```
+
+###### Note: It is on purpose that the default column index was not used for grouping to narrow the scope of the function as opposed to widening it
 
 ## Exercise 3: Function Examples
 
@@ -158,7 +160,7 @@ test_that("Invalid data type error", {
     })
 ```
 
-    ## Test passed 🎊
+    ## Test passed 🥇
 
 ###### Test 2: Checking for valid argument range
 
@@ -178,7 +180,7 @@ test_that("Empty group by index error", {
     })
 ```
 
-    ## Test passed 😸
+    ## Test passed 🥇
 
 ###### Test 4: Checking for computational correctness
 
@@ -188,7 +190,7 @@ test_that("Expect the mean to equal 3 for all data vales = 3 grouped by first in
     })
 ```
 
-    ## Test passed 🎉
+    ## Test passed 🥳
 
 ###### Test 5: Checking for proper handling of N/A values
 
@@ -198,4 +200,4 @@ test_that("Test mean removes NA values in summarized column ", {
     })
 ```
 
-    ## Test passed 😀
+    ## Test passed 🥇
