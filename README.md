@@ -12,10 +12,10 @@ This is a individual project for UBC course *[STAT 545B](https://stat545.stat.ub
   
 
 ## Current Project Files
-1. *[assignment-b1-and-b2-hs235](/Assign_B1.md)*: rendered in Github friendly format.
+1. *[assignment-b1](/Assign_B1.md)*: rendered in Github friendly format.
 
 ## Code execution
-The corrected code can be run from files *[assignment-b1-and-b2-hs235](/Assign_B1.Rmd)* using `R` software along with additional packages such as `tidyverse`, `devtools`, and specifically  `test_that`. Using an IDE such as `RStudio` carries out this task easily.
+The corrected code can be run from files *[assignment-b1](/Assign_B1.Rmd)* using `R` software along with additional packages such as `tidyverse`, `devtools`, and specifically  `test_that`. Using an IDE such as `RStudio` carries out this task easily.
 
 ## Contributers
 [@Harsh](https://github.com/hs235)
