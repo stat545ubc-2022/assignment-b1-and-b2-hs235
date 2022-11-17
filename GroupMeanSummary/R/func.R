@@ -40,5 +40,5 @@ summarize_by_group_mean = function(dataFrame, group_by){
   dataFrame %>% 
     group_by_at(group_by) %>%
     summarise(across(where(is.numeric), ~ mean(.x, na.rm = TRUE))) %>% 
-    return
+    return()
 }
