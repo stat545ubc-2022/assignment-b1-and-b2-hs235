@@ -10,7 +10,7 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 <!-- credits: taken from https://github.com/vincenzocoia/powers/blob/master/README.md -->
 <!-- badges: end -->
 
-The goal of **GroupMeanSummary** package is
+This `R` package, **GroupMeanSummary**, is
 
 ## Installation
 

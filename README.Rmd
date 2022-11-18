@@ -16,10 +16,10 @@ knitr::opts_chunk$set(
 # GroupMeanSummary
 
 <!-- badges: start -->
-[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)(https://www.tidyverse.org/lifecycle/#stable) <!-- credits: taken from https://github.com/vincenzocoia/powers/blob/master/README.md -->
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable) <!-- credits: taken from https://github.com/vincenzocoia/powers/blob/master/README.md -->
 <!-- badges: end -->
 
-The goal of **GroupMeanSummary** package is 
+This `R` package, **GroupMeanSummary**, is 
 
 ## Installation
 
@@ -41,4 +41,3 @@ library(GroupMeanSummary)
 
 ## Contributers
 [@Harsh](https://github.com/hs235)
-
