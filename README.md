@@ -23,7 +23,7 @@ You can install the development version of GroupMeanSummary from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("stat545ubc-2022/assignment-b1-and-b2-hs235")
+devtools::install_github("stat545ubc-2022/assignment-b1-and-b2-hs235", ref = "1.0.0")
 ```
 
 ## Example
@@ -34,7 +34,7 @@ An example to demonstrate usage:
 suppressPackageStartupMessages(library(GroupMeanSummary))
 suppressPackageStartupMessages(library(tidyverse))
 
-# Creating sample data
+## Creating sample data
 (df <- data.frame(Name = c("Julia", "Harsh", "Nicole", "Julia", "Nicole"),
                  TransactionCost = c(100, 50, 80, 100, 40),
                  ItemsPurchased = c(4,1,4,6,2)
@@ -46,7 +46,7 @@ suppressPackageStartupMessages(library(tidyverse))
 #> 4  Julia             100              6
 #> 5 Nicole              40              2
 
-# Summarizing the mean of transaction cost and items purchased per person
+## Summarizing the mean of transaction cost and items purchased per person
 summarize_by_group_mean(df, "Name")
 #> # A tibble: 3 × 3
 #>   Name   TransactionCost ItemsPurchased
