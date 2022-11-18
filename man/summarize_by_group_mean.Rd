@@ -7,20 +7,18 @@
 summarize_by_group_mean(dataFrame, group_by)
 }
 \arguments{
-\item{dataFrame}{dataframe_like_object input only accepts dataframe or tibbular data & hence the chosen name to indicate the inclusion of both}
+\item{dataFrame}{dataframe_like_object accepts either dataframe or tibbular data & hence the chosen name to indicate the inclusion of both}
 
-\item{group_by}{vector should be non-empty, can either be numerical or string thus the chosen name is kept generic}
+\item{group_by}{vector should be non-empty and can either be numerical or string thus the chosen name is kept generic}
 }
 \value{
-tibble for the case where legal arguments are passed returning values of calculated mean for numeric columns not used in grouping
-
-null for the case where invalid arguments are passed to function along with error message
+tibble for the case where legal arguments are passed otherwise null along with an error message
 }
 \description{
-The function automates the calculation of arithmetic mean operating on and summarizing by the grouping chosen by the user
+The function automates the calculation of arithmetic mean - operating and summarizing on the grouping chosen by the user
 }
 \details{
-This is a generic function that can group by one or multiple levels passed by the user
-User can pass provide argument for grouping either by numerical index or column name because both ways are used in practice
-Rows with N/A values are kept as it can still be valid grouping combinations. Thus N/A values are treated via omission in the calculation of mean
+This is a generic function that can group by one or multiple levels passed by the user.
+User can pass provide argument for grouping either by numerical index or column name because both ways are used in practice.
+Rows with N/A values are kept as it can still be valid grouping combinations. Thus N/A values are treated via omission in the calculation of mean.
 }
