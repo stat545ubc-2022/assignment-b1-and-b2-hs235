@@ -7,6 +7,7 @@
 
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
+<!-- credits: taken from https://github.com/vincenzocoia/powers/blob/master/README.md -->
 <!-- badges: end -->
 
 The goal of GroupMeanSummary is to TEST…
