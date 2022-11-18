@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable) <!-- credits: taken from https://github.com/vincenzocoia/powers/blob/master/README.md -->
 <!-- badges: end -->
 
-This `R` package, **GroupMeanSummary**, is 
+This `R` package provides a **convenient function to calculate the arithmetic mean**. Further, the user can choose to group the data at any single or multiple levels to calculate the mean over those groupings. Moreover, for convenience, the user can select data grouping via column index(es) or column name(s).
 
 ## Installation
 
@@ -32,11 +32,20 @@ devtools::install_github("stat545ubc-2022/assignment-b1-and-b2-hs235")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+An example to demonstrate usage:
 
 ```{r example}
-library(GroupMeanSummary)
-## basic example code
+suppressPackageStartupMessages(library(GroupMeanSummary))
+suppressPackageStartupMessages(library(tidyverse))
+
+# Creating sample data
+(df <- data.frame(Name = c("Julia", "Harsh", "Nicole", "Julia", "Nicole"),
+                 TransactionCost = c(100, 50, 80, 100, 40),
+                 ItemsPurchased = c(4,1,4,6,2)
+                 ))
+
+# Summarizing the mean of transaction cost and items purchased per person
+summarize_by_group_mean(df, "Name")
 ```
 
 ## Contributers
