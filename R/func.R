@@ -39,7 +39,7 @@ summarize_by_group_mean = function(dataFrame, group_by){
   
   # now grouping the data, summarize by mean while omitting N/A values, and return
   dataFrame %>% 
-    group_by_at(group_by) %>%
-      summarise(across(where(is.numeric), ~ mean(.x, na.rm = TRUE))) %>% 
+    dplyr::group_by_at(group_by) %>%
+      dplyr::summarise(dplyr::across(where(is.numeric), ~ mean(.x, na.rm = TRUE))) %>% 
         return()
 }
