@@ -13,9 +13,9 @@ test_that("Empty group by index error", {
 })
 
 test_that("Expect the mean to equal 3 for all data vales = 3 grouped by first index", {
-  expect_equivalent(summarize_by_group_mean(tibble(c(1,1),3),c(1)), tibble(c(1),c(3)))
+  expect_equal(summarize_by_group_mean(tibble(c(1,1),3),c(1)), tibble(c(1),c(3)), ignore_attr=TRUE)
 })
 
 test_that("Test mean removes NA values in summarized column ", {
-  expect_equivalent(summarize_by_group_mean(tibble(c(1,1,2),c(3,NA,5)),c(1)), tibble(c(1,2),c(3,5)))
+  expect_equal(summarize_by_group_mean(tibble(c(1,1,2),c(3,NA,5)),c(1)), tibble(c(1,2),c(3,5)), ignore_attr=TRUE)
 })
