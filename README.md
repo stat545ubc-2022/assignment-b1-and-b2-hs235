@@ -47,7 +47,16 @@ suppressPackageStartupMessages(library(tidyverse))
 #> 4 Kelly       Vancouver             100              6
 #> 5  Brad         Burnaby              40              2
 
-## Summarizing the mean of transaction cost and items purchased per person
+## Summary of arithmetic mean on sample data by person
+summarize_by_group_mean(sampleData, "Name")
+#> # A tibble: 3 × 3
+#>   Name  TransactionCost ItemsPurchased
+#>   <chr>           <dbl>          <dbl>
+#> 1 Brad               60              3
+#> 2 Harsh              50              1
+#> 3 Kelly             100              5
+
+## Summary of arithmetic mean on sample data by city and person
 summarize_by_group_mean(sampleData, c(2,1))
 #> # A tibble: 5 × 4
 #> # Groups:   TransactionCity [3]
