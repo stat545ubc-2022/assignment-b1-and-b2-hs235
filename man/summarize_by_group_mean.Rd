@@ -22,3 +22,10 @@ This is a generic function that can group by one or multiple levels passed by th
 User can pass provide argument for grouping either by numerical index or column name because both ways are used in practice.
 Rows with N/A values are kept as it can still be valid grouping combinations. Thus N/A values are treated via omission in the calculation of mean.
 }
+\examples{
+sample_data <- data.frame(Name = c("Julia", "Harsh", "Nicole", "Julia", "Nicole"), TransactionCity = c("Vancouver", "Vancouver", "Burnaby", "Richmond", "Burnaby"), TransactionCost = c(100, 50, 80, 100, 40), ItemsPurchased = c(4,1,4,6,2)) # Generating sample data
+summarize_by_group_mean(sample_data, "Name") #Providing arithmetic mean summary per person using column name
+summarize_by_group_mean(sample_data, c(2))   #Providing arithmetic mean summary per city using column index
+summarize_by_group_mean(sample_data, c(2,1)) #Providing arithmetic mean summary per city and name using column index
+
+}
