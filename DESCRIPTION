@@ -2,8 +2,10 @@ Package: GroupMeanSummary
 Title: Conveniently Computes and Summarizes Data by Group Mean
 Version: 1.0.0
 Authors@R: 
-    person("Harsh", "Sharma", , "harsh1792@gmail.com.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+    person("Harsh",
+           "Sharma",
+           email = "harsh1792@gmail.com",
+           role = c("aut", "cre"))
 Description: This package conveniently automates the calculation of arithmetic mean.
     Further, the user can choose to group the data at any single or multiple levels.
     For convenience the user can select data grouping via column indices or name(s).
