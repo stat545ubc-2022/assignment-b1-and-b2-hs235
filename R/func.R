@@ -12,7 +12,7 @@
 #' @return tibble for the case where legal arguments are passed otherwise null along with an error message
 #' 
 #' @examples 
-#' sample_data <- data.frame(Name = c("Julia", "Harsh", "Nicole", "Julia", "Nicole"), TransactionCity = c(Vancouver, Vancouver, Burnaby, Richmond, Burnaby), TransactionCost = c(100, 50, 80, 100, 40), ItemsPurchased = c(4,1,4,6,2))
+#' sample_data <- data.frame(Name = c("Julia", "Harsh", "Nicole", "Julia", "Nicole"), TransactionCity = c("Vancouver", "Vancouver", "Burnaby", "Richmond", "Burnaby"), TransactionCost = c(100, 50, 80, 100, 40), ItemsPurchased = c(4,1,4,6,2)) # Generating sample data
 #' summarize_by_group_mean(sample_data, "Name") #Providing arithmetic mean summary per person using column name
 #' summarize_by_group_mean(sample_data, c(2))   #Providing arithmetic mean summary per city using column index
 #' summarize_by_group_mean(sample_data, c(2,1)) #Providing arithmetic mean summary per city and name using column index
