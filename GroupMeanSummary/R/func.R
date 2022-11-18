@@ -13,7 +13,7 @@
 #' @return null for the case where invalid arguments are passed to function along with error message   
 
 #options(dplyr.summarise.inform = FALSE) # Suppressing default message using global option
-
+#' @export
 summarize_by_group_mean = function(dataFrame, group_by){
   if (! (is.vector(group_by) && length(group_by) > 0)){
     stop('Group by column parameter is invalid')
