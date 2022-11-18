@@ -39,13 +39,14 @@ suppressPackageStartupMessages(library(GroupMeanSummary))
 suppressPackageStartupMessages(library(tidyverse))
 
 ## Creating sample data
-(df <- data.frame(Name = c("Julia", "Harsh", "Nicole", "Julia", "Nicole"),
+(sampleData <- data.frame(Name = c("Kelly", "Harsh", "Brad", "Kelly", "Brad"),
+                 TransactionCity = c("Burnaby", "Vancouver", "Richmond", "Vancouver", "Burnaby"),
                  TransactionCost = c(100, 50, 80, 100, 40),
                  ItemsPurchased = c(4,1,4,6,2)
                  ))
 
 ## Summarizing the mean of transaction cost and items purchased per person
-summarize_by_group_mean(df, "Name")
+summarize_by_group_mean(sampleData, c(2,1))
 ```
 
 ## Contributers

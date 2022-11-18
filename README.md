@@ -35,25 +35,29 @@ suppressPackageStartupMessages(library(GroupMeanSummary))
 suppressPackageStartupMessages(library(tidyverse))
 
 ## Creating sample data
-(df <- data.frame(Name = c("Julia", "Harsh", "Nicole", "Julia", "Nicole"),
+(sampleData <- data.frame(Name = c("Kelly", "Harsh", "Brad", "Kelly", "Brad"),
+                 TransactionCity = c("Burnaby", "Vancouver", "Richmond", "Vancouver", "Burnaby"),
                  TransactionCost = c(100, 50, 80, 100, 40),
                  ItemsPurchased = c(4,1,4,6,2)
                  ))
-#>     Name TransactionCost ItemsPurchased
-#> 1  Julia             100              4
-#> 2  Harsh              50              1
-#> 3 Nicole              80              4
-#> 4  Julia             100              6
-#> 5 Nicole              40              2
+#>    Name TransactionCity TransactionCost ItemsPurchased
+#> 1 Kelly         Burnaby             100              4
+#> 2 Harsh       Vancouver              50              1
+#> 3  Brad        Richmond              80              4
+#> 4 Kelly       Vancouver             100              6
+#> 5  Brad         Burnaby              40              2
 
 ## Summarizing the mean of transaction cost and items purchased per person
-summarize_by_group_mean(df, "Name")
-#> # A tibble: 3 × 3
-#>   Name   TransactionCost ItemsPurchased
-#>   <chr>            <dbl>          <dbl>
-#> 1 Harsh               50              1
-#> 2 Julia              100              5
-#> 3 Nicole              60              3
+summarize_by_group_mean(sampleData, c(2,1))
+#> # A tibble: 5 × 4
+#> # Groups:   TransactionCity [3]
+#>   TransactionCity Name  TransactionCost ItemsPurchased
+#>   <chr>           <chr>           <dbl>          <dbl>
+#> 1 Burnaby         Brad               40              2
+#> 2 Burnaby         Kelly             100              4
+#> 3 Richmond        Brad               80              4
+#> 4 Vancouver       Harsh              50              1
+#> 5 Vancouver       Kelly             100              6
 ```
 
 ## Contributers
